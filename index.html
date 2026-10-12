@@ -1754,7 +1754,7 @@ const DA=[{es:'Contenido promocional para la nueva temporada de la serie Valeria
 const orx=(b)=>{const D={es:'[descripción del video]',en:'[video description]'}[L],G={es:'Diferentes tipos de contenido para abarcar el mundo tecnología comprendido por la marca: tutoriales, entrevistas, tips y trends.',en:'Different types of content covering the technology world within the brand: tutorials, interviews, tips and trends.'}[L];
 const grp=(k,st)=>`<div class="og ${k}"><div class="ogr">${Array.from({length:4},(_,i)=>`<div class="ov o${i+1}">${ct(b,'orange-'+k+'-'+(i+1),'or-v',`${st?'':`${i===3?'<span class="tag">TikTok</span>':''}`}${st?`<img class="vst" src="${BLC[['nflx','dis','prime','lal2'][i]]}" alt="">`:''}`)}${st?`<p>${DA[i][L]}</p>`:''}</div>`).join('')}</div>${st?'':`<p class="ogd">${G}</p><div class="ocr">${atf('ocf',BLC.otv,'orangetv','')}${atf('ocf',BLC.jazz,'jazztel','')}</div>`}</div>`;
 return `<div class="orx">${grp('a',1)}${grp('b',0)}</div>`};
-const orf=(b)=>{const D={es:'Creatividades para promocionar los estrenos de películas y series de los partners de Orange TV, integrando visualmente elementos del universo de la telefonía y dispositivos.',en:'Creatives promoting the premieres of films and series from Orange TV’s partners, visually integrating elements from the world of telephony and devices.'}[L],A={es:'Pieza de Orange TV',en:'Orange TV piece'}[L];return `<div class="sub ss orf" id="orange-fotos"><div class="ofx">${[1,2,3,4,5,6,7,8].map(n=>`<figure class="of o${n} rv"><img src="fotos/orange-${n}.jpg?v=48" alt="${A} ${n}" loading="lazy" decoding="async"></figure>`).join('')}</div><p class="ofd rv">${D}</p></div>`};
+const orf=(b)=>{const D={es:'Creatividades para promocionar los estrenos de películas y series de los partners de Orange TV, integrando visualmente elementos del universo de la telefonía y dispositivos.',en:'Creatives promoting the premieres of films and series from Orange TV’s partners, visually integrating elements from the world of telephony and devices.'}[L],A={es:'Pieza de Orange TV',en:'Orange TV piece'}[L];return `<div class="sub ss orf" id="orange-fotos"><div class="ofx">${[1,2,3,4,5,6,7,8].map(n=>`<figure class="of o${n} rv"><img src="fotos/orange-${n}.jpg?v=49" alt="${A} ${n}" loading="lazy" decoding="async"></figure>`).join('')}</div><p class="ofd rv">${D}</p></div>`};
 const lmx=(b)=>{const W={es:['transiciones','trends','moda','life-style'],en:['transitions','trends','fashion','life-style']}[L];
 const LG={2:'ribs',4:'esprit',9:'guess'};
 const v=n=>`<div class="lv l${n}">${ct(b,'lolita-'+n,'lm-v',LG[n]?`<img class="vst" src="${BLC[LG[n]]}" alt="">`:'')}</div>`;
@@ -1826,7 +1826,7 @@ const p=e.target.closest('.pl');if(!p)return;
 const s=p.parentElement,src=s.dataset.src;
 let v=s.querySelector('video');
 if(v){document.querySelectorAll('.scr video').forEach(o=>{if(o!==v)o.pause()});v.play().catch(()=>{});return}
-v=document.createElement('video');v.controls=false;v.playsInline=true;v.setAttribute('controlsList','nodownload nofullscreen noremoteplayback');v.setAttribute('disablePictureInPicture','');v.setAttribute('disableRemotePlayback','');v.setAttribute('webkit-playsinline','');v.oncontextmenu=e=>e.preventDefault();v.preload='none';v.src=src+'?v=48';
+v=document.createElement('video');v.controls=false;v.playsInline=true;v.setAttribute('controlsList','nodownload nofullscreen noremoteplayback');v.setAttribute('disablePictureInPicture','');v.setAttribute('disableRemotePlayback','');v.setAttribute('webkit-playsinline','');v.oncontextmenu=e=>e.preventDefault();v.preload='none';v.src=src+'?v=49';
 const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';const fill=bar.firstChild;
 v.onerror=()=>{v.remove();bar.remove();s.classList.remove('playing');p.style.display='';s.classList.add('miss');p.querySelector('em').textContent=t('miss')+src};
 v.onclick=ev=>{ev.stopPropagation();v.paused?v.play().catch(()=>{}):v.pause()};
@@ -1844,7 +1844,7 @@ build();addSkips();
 setTimeout(liftStk,200);
 
 
-function posters(){document.querySelectorAll('.scr[data-src]').forEach(sc=>{if(sc.dataset.pst)return;sc.dataset.pst=1;const u=sc.dataset.src.replace(/\.mp4$/,'.jpg'),im=new Image();im.onload=()=>{sc.style.backgroundImage='url("'+u+'?v=48")';sc.style.backgroundSize='cover';sc.style.backgroundPosition='center'};im.src=u+'?v=48'})}
+function posters(){document.querySelectorAll('.scr[data-src]').forEach(sc=>{if(sc.dataset.pst)return;sc.dataset.pst=1;const u=sc.dataset.src.replace(/\.mp4$/,'.jpg'),im=new Image();im.onload=()=>{sc.style.backgroundImage='url("'+u+'?v=49")';sc.style.backgroundSize='cover';sc.style.backgroundPosition='center'};im.src=u+'?v=49'})}
 function addSkips(){posters();
 document.querySelectorAll('.skip').forEach(e=>e.remove());
 const secs=[...document.querySelectorAll('#brands > section.brand')];
